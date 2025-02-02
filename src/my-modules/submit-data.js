@@ -2,7 +2,7 @@
 export const submitData = async (e, addDoc, collection, db) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    
+
     try {
       const docRef = await addDoc(collection(db, "reports"), {
         date: new Date(),
@@ -15,4 +15,3 @@ export const submitData = async (e, addDoc, collection, db) => {
       console.error("Error adding document: ", e);
     }
   };
-  

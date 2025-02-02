@@ -21,12 +21,12 @@ const app = initializeApp(firebaseConfig);
 // Cloud Firestoreの初期化
 const db = getFirestore(app);
 
-  //fetchHistoryDataインポート
+  //fetchHistoryDataインポート。取得したデータを表示
   if (document.getElementById("js-history")) {
     fetchHistoryData(getDocs, collection, db);
   }
 
-  //submitDataインポート
+  //submitDataインポート。データを送信
   if (document.getElementById("js-form")) {
     document
       .getElementById("js-form")
