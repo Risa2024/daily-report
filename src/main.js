@@ -12,7 +12,7 @@ const firebaseConfig = {
   projectId: import.meta.env.VITE_PROJECT_ID,
   storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
   messagingSenderId: import.meta.env.VITE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_APP_ID
+  appId: import.meta.env.APP_ID,
 };
 
 // Initialize Firebase
@@ -21,14 +21,14 @@ const app = initializeApp(firebaseConfig);
 // Cloud Firestoreの初期化
 const db = getFirestore(app);
 
-  //fetchHistoryDataインポート。取得したデータを表示
-  if (document.getElementById("js-history")) {
-    fetchHistoryData(getDocs, collection, db);
-  }
+//fetchHistoryDataインポート。取得したデータを表示
+if (document.getElementById("js-history")) {
+  fetchHistoryData(getDocs, collection, db);
+}
 
-  //submitDataインポート。データを送信
-  if (document.getElementById("js-form")) {
-    document
-      .getElementById("js-form")
-      .addEventListener("submit", (e) => submitData(e, addDoc, collection, db));
-  }
+//submitDataインポート。データを送信
+if (document.getElementById("js-form")) {
+  document
+    .getElementById("js-form")
+    .addEventListener("submit", (e) => submitData(e, addDoc, collection, db));
+}
