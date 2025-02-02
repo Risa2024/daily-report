@@ -1,13 +1,18 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs, addDoc } from "firebase/firestore";
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAGe10Tolg4iVwQQijiweU9LO2nPT97Sp4",
-  authDomain: "daily-report-90f74.firebaseapp.com",
-  projectId: "daily-report-90f74",
-  storageBucket: "daily-report-90f74.firebasestorage.app",
-  messagingSenderId: "709625491912",
-  appId: "1:709625491912:web:baa203917a1eefe65290fd"
+  apiKey: "AIzaSyC3aJfzZ74kB2VnK_tFgAla4gALFuUlMXQ",
+  authDomain: "daily-report-7eff0.firebaseapp.com",
+  projectId: "daily-report-7eff0",
+  storageBucket: "daily-report-7eff0.firebasestorage.app",
+  messagingSenderId: "658851324236",
+  appId: "1:658851324236:web:735906b84f6c42cc192fe9"
 };
 
 // Initialize Firebase
